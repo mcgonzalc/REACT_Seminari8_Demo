@@ -1,0 +1,76 @@
+.formContainer {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Softer background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formContainer:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Increased gap for better spacing */
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Increased gap for better spacing */
+}
+
+.label {
+    font-size: 16px; /* Slightly larger font */
+    color: #444; /* Softer color */
+    font-weight: bold;
+}
+
+.input {
+    padding: 12px; /* Increased padding for better usability */
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Slightly more rounded */
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add glow effect */
+    outline: none;
+}
+
+.buttonGroup {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; /* Increased gap for better spacing */
+}
+
+.button {
+    padding: 12px 25px; /* Increased padding for better usability */
+    border: none;
+    border-radius: 6px; /* Slightly more rounded */
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: bold; /* Bold text for buttons */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    flex: 1;
+}
+
+.button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.button:active {
+    background-color: #004080;
+    transform: scale(0.95); /* Slightly shrink on click */
+}

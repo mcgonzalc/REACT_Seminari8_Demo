@@ -26,6 +26,21 @@ export const addUser = async (newUser: User): Promise<User> => {
     }
 };
 
+//Update an exiting user
+export const updateUser = async (userId: string, updatedUser: User): Promise<User> => {
+    try {  
+        const response = await axios.put<User>(`http://localhost:9000/api/Users/${userId}`, updatedUser);
+        if (response.status !== 200) {
+            throw new Error('Failed to update user');
+        }
+        return response.data;
+    }
+    catch (error) {
+        console.error('Error updating user:', error);
+        throw error;
+    }
+};
+
 // Log in a user
 export const LogIn = async (email: string, password: string): Promise<User> => {
     try {
